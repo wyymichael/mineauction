@@ -10,7 +10,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, UniqueConstraint, In
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 
-# 创建对象的基类:
+#创建对象的基类:
 Base = declarative_base()
 
 # 定义Auction对象:
