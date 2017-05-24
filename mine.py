@@ -10,15 +10,15 @@ import json
 import requests
 
 
-#lots = session.query(Lot).filter(Lot.secondary_title.like('%趙無極%')).all()
-lots = session.query(Lot).all()
+lots = session.query(Lot).filter(Lot.secondary_title.like('%趙無極%')).filter(Lot.id == 796276738668892160).all()
+#lots = session.query(Lot).all()
 notes = ""
 for lot in lots:
     notes += lot.notes.replace(' ','')
 
-#words = jieba.cut(notes)
-#print("Full Mode: " + "/ ".join(words)) 
+words = jieba.cut(notes)
+print("Full Mode: " + "/ ".join(words)) 
 
-print (jieba.analyse.extract_tags(notes, 50))
+#print (jieba.analyse.extract_tags(notes, 50))
 
 session.close()
