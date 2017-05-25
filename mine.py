@@ -10,7 +10,7 @@ import json
 import requests
 
 
-lots = session.query(Lot).filter(Lot.secondary_title.like('%趙無極%')).filter(Lot.id == 796276738668892160).all()
+lots = session.query(Lot).filter(Lot.secondary_title.like('%趙無極%')).filter(Lot.id == 796916965653614592).all()
 #lots = session.query(Lot).all()
 notes = ""
 for lot in lots:
